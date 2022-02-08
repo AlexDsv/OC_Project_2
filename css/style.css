@@ -1,8 +1,5 @@
 @font-face 
 {
-    font-family: "Raleway";
-    src: url('fonts/Raleway-VariableFont_wght.ttf') format('ttf'),
-         url('fonts/Raleway-Regular.ttf') format('ttf');
     font-weight:normal;
     font-style:normal;
 }
@@ -11,20 +8,20 @@ body
 {
     margin: 0;
     font-family: "Raleway", serif;
-
+    
 }
 
-input[type=text]::-ms-clear {  display: none; width : 0; height: 0; }
-input[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }
-input[type="search"]::-webkit-search-decoration,
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-results-button,
-input[type="search"]::-webkit-search-results-decoration { display: none; }
+input[type=text]::-ms-clear {  display: none; width : 0; height: 0; }           
+input[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }          
+input[type="search"]::-webkit-search-decoration,                               /*Masquer la croix de la barre de recherche*/
+input[type="search"]::-webkit-search-cancel-button,                             
+input[type="search"]::-webkit-search-results-button,                            
+input[type="search"]::-webkit-search-results-decoration { display: none; }      
 
 
 i
 {
-    color: #0065FC;   
+    color: #0065FC;     
 }
 
 ul i
@@ -65,15 +62,21 @@ ul span:hover
 
 
 
-h2
+h1, h2
 {
-
+    
     font-weight: bold;
 }
 
-#logoinfo
+nav ul
 {
-    border: 1px #F2F2F2 solid;
+
+    display: flex;
+}
+
+#logoinfo                              
+{
+    border: 1px #F2F2F2 solid;      
     padding: 4px 10px 4px 10px;
     border-radius: 100%;
     
@@ -95,7 +98,7 @@ a
     text-decoration: none;
 }
 
-h1
+#logo_booki img
 {
  margin: auto;
  margin-right: auto;
@@ -112,11 +115,6 @@ header
     margin-left: 50px;
 }
 
-nav ul
-{
-
-    display: flex;
-}
 
 nav li
 {
@@ -180,7 +178,7 @@ nav li
     margin-bottom: 20px;
 }
 
-#searchbar #location_icon
+#searchbar #location_icon       /*Icone localisation barre de recherche */
 {
     margin-right: -5px;
     padding: 15.25px 25px 12.5px 25px;
@@ -190,7 +188,7 @@ nav li
 
 }
 
-#regular_button
+#regular_button         /* Bouton bleu Rechercher barre de recherche */
 {
     border: none;
     width: 130px;
@@ -208,7 +206,7 @@ nav li
     border-radius: 0 15px 15px 0;
 }
 
-#mobile_button
+#mobile_button          /* Bouton version mobile cachée */
 {
     visibility: hidden;
 }
@@ -250,8 +248,6 @@ button a:visited
     justify-content: flex-start;
 }
 
-/* PARTIE SECTIONS*/
-
 .cards_results
 {
     display: flex;
@@ -277,9 +273,9 @@ section
     width: 60%;
 }
 
-#hebergements_a_marseille h3
+#hebergements_a_marseille h2
 {
-    font-size: 23px;
+    font-size: 25px;
     margin-bottom: 30px;
 }
 
@@ -331,7 +327,7 @@ section
     margin-top: -10px;
 }
 
-#cannebiere h4, #hotel_du_port h4, #les_mouettes h4, #hotel_de_la_mer h4, #auberge_le_panier h4, #hotel_chez_amina h4
+#cannebiere h3, #hotel_du_port h3, #les_mouettes h3, #hotel_de_la_mer h3, #auberge_le_panier h3, #hotel_chez_amina h3
 {
     font-size: 15px;
     margin-top: 0px;
@@ -420,7 +416,7 @@ section
 
 }
 
-.fa-child
+.fa-child       /* Arrondi de l'icône qui était ovale */
 {
     width: 13px;
     padding-left: 3px;
@@ -435,7 +431,7 @@ section
 
 }
 
-#most_popular h3
+#most_popular h2
 {
     font-size: 25px;
     margin-bottom: 20px;
@@ -476,7 +472,7 @@ section
     margin-right: 5px;
 }
 
-#soleil_du_matin h4
+#soleil_du_matin h3
 {
     margin-bottom: 20px;
 }
@@ -658,12 +654,12 @@ section
 
 
 
-.blue
+.blue   /* Ligne pour faciliter le choix de couleur des icônes du projet */
 {
     color: #0065FC;
 }
 
-.grey
+.grey    /* Ligne pour faciliter le choix de couleur des icônes du projet */
 {
     color: #F2F2F2;
 }
@@ -674,12 +670,12 @@ section
 }
 
 
-@media screen and (max-width: 1308px)
+@media screen and (max-width: 1308px)  /* Breakpoint pour empêcher les cards et le bloc Plus populaires de trop s'écraser */
 {
-    #most_popular
+    #most_popular   
     {
         width: 23%;
-        min-width: 350px;
+        min-width: 365px;
     }
 
     #hebergements_a_marseille
@@ -689,7 +685,7 @@ section
 
 }
 
-@media screen and (max-width: 1200px)
+@media screen and (max-width: 1200px) /* Breakpoint pour adapter/re-arranger la partie Activités à la taille de l'écran */ 
 {
 
 
@@ -711,7 +707,7 @@ section
 
 }
 
-@media screen and (max-width: 1160px)
+@media screen and (max-width: 1160px) /* Les plus populaires passent en ligne et au dessus afin de conserver une bonne mise en page */
 {
     .cards_results
     {
@@ -739,7 +735,7 @@ section
         min-width: 301px;
     }
 
-    #soleil_du_matin h4, #au_coeur_de_l_eau h4, #tout_bleu_et_blanc h4
+    #soleil_du_matin h3, #au_coeur_de_l_eau h3, #tout_bleu_et_blanc h3
     {
         font-size: 16px;
         white-space: normal;
@@ -777,7 +773,7 @@ section
 }
 
 
-@media screen and (max-width: 992px)
+@media screen and (max-width: 992px) /* Section passe en colonne et Les plus populaires repassent aussi en colonne mais en occupant tout l'espace */
 {
     #most_popular
     {
@@ -808,7 +804,7 @@ section
 
 
 
-@media screen and (max-width: 768px)
+@media screen and (max-width: 768px) /* Version mobile tout en colonne et adaptée aux smartphones */
 {
     header
     {
@@ -878,6 +874,7 @@ section
     {
         margin-left: -83px;
     }
+    
     #navbox
     {
         display: flex;
@@ -940,7 +937,7 @@ section
         display: none;
     }
 
-    #mobile_button
+    #mobile_button      /* Bouton de recherche version mobile rendu visible en remplaçant celui de la version desktop */
    {
     visibility: visible;
     border: none;
@@ -964,9 +961,6 @@ section
         color: white;
     }
 
-
-    /* PARTIE SECTIONS*/
-
     #soleil_du_matin, #au_coeur_de_l_eau, #tout_bleu_et_blanc
     {
         margin-bottom: 20px;
@@ -974,7 +968,7 @@ section
         min-width: 250px;
     }
 
-    #soleil_du_matin h4, #au_coeur_de_l_eau h4, #tout_bleu_et_blanc h4
+    #soleil_du_matin h3, #au_coeur_de_l_eau h3, #tout_bleu_et_blanc h3
     {
         white-space: normal;
     }
